@@ -1,20 +1,9 @@
 import React, { useState } from "react";
-import Home from "./Home"
+import Home from "./Components/Home";
 //import Description from "./Description"
 
-function Collection({collection})
-{
-    const gameCollection = collection.map(game => (
-        <Home game={game}/>
-    ))
- 
-    return(
-        <div>
-            {gameCollection}
-        </div>
-    )
-    
-
+function Collection() {
+  return null;
 }
 
 export default Collection;

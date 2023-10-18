@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 
-function Form({URL}) {
+function Form({ URL }) {
+  const onSubmit = (newGame) => {
+    fetch(URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(newGame),
+    });
+  };
+
   const [newGame, setNewGame] = useState({
     title: "",
     image: "",
@@ -21,7 +32,7 @@ function Form({URL}) {
   const onSubmitNewGame = (event) => {
     event.preventDefault();
     // we are preventing default on submission because we don't want the page to rerender
-    onsubmit(newGame);
+    onSubmit(newGame);
   };
 
   return (
@@ -68,6 +79,7 @@ function Form({URL}) {
         placeholder="your review"
         onChange={onChangeNewGame}
       />
+      <input type="submit" value="add" />
     </form>
   );
 }

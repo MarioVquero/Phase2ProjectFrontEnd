@@ -1,39 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  Router,
-  RouterProvider
-} from "react-router-dom";
-import Home from "./Components/Home"
-import Form from './Form';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
+import Home from "./Components/Home";
+import Form from "./Form";
+import Collection from "./Collection";
 
 // URL to send to home and form for GET request and POST request
-const URL = "http://localhost:3000/god-of-war-games"
-
+const URL = "http://localhost:3000/god-of-war-games";
 
 //display Home as our initial page
 const router = createBrowserRouter([
   {
-    path:"/",
-    element: <Home URL={URL}/>,
+    path: "/",
+    element: <Home URL={URL} />,
   },
   {
-    path:"form",
-    element:<Form URL={URL}/>
+    path: "form",
+    element: <Form URL={URL} />,
   },
   {
-    path:"collection",
-    element:<Collection URL={URL}/>
-  }
-])
+    path: "collection",
+    element: <Collection URL={URL} />,
+  },
+]);
 
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
