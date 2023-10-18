@@ -3,17 +3,9 @@ import Description from "./Description";
 
 function Games({Games})
 {
-
-    const [IorD, setIorD] = useState(false);
-
-    
-    //mapping for the game images and displaying them
-    
-        
-
     return(
         Games.map(game => (
-            <Description Games={game}/>
+            <Description Games={game} key={game.id}/>
         ))
     )
 
