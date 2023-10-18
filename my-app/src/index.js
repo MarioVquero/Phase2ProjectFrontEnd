@@ -9,6 +9,7 @@ import {
   RouterProvider
 } from "react-router-dom";
 import Home from "./Components/Home"
+import Form from './Form';
 
 // URL to send to home and form for GET request and POST request
 const URL = "http://localhost:3000/god-of-war-games"
@@ -19,6 +20,14 @@ const router = createBrowserRouter([
   {
     path:"/",
     element: <Home URL={URL}/>,
+  },
+  {
+    path:"form",
+    element:<Form URL={URL}/>
+  },
+  {
+    path:"collection",
+    element:<Collection URL={URL}/>
   }
 ])
 
