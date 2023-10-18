@@ -1,0 +1,14 @@
+import React from "react";
+
+export default function Description({Games})
+{
+    
+    return (
+      <div>
+        <h1>{Games.title}</h1>
+        <h2>{Games.yearOfRelease}</h2>
+        <h3>{Games.rating}</h3>
+        <p>{Games.review}</p>
+      </div>
+    )
+}

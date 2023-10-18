@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Games from "./Games";
 import Description from "./Description";
 import Nav from "../nav";
-import { useFetcher } from "react-router-dom";
 
 export default function Home({URL})
 {
@@ -18,6 +17,7 @@ export default function Home({URL})
         <div>
             <Nav />
             <Games Games={games}/>
+            <Description Games={games}/>
         </div>
         
     )
