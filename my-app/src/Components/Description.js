@@ -12,11 +12,6 @@ export default function Description({Games})
         // </div>
     //     ))
     return (
-        <div>
-            <h1>{Games.title}</h1>
-            <h2>{Games.yearOfRelease}</h2>
-            <h3>{Games.rating}</h3>
-            <p>{Games.review}</p>
-        </div>
+        console.log("words")
     )
 }
