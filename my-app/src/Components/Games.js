@@ -3,13 +3,13 @@ import Description from "./Description";
 
 function Games({Games})
 {
-    const gameCollection = Games.map(game => (
-        <div>
-        <img src={game.image} key={game.id}/>
-
-        
+    function displayInfo(game)
+    {
         <Description Games={game}/>
-        </div>
+    }
+    //mapping for the game images and displaying them
+    const gameCollection = Games.map(game => (
+        <img src={game.image} key={game.id} onClick={displayInfo(game)}/>
     ))
 
     return(

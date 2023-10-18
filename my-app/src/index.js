@@ -10,8 +10,11 @@ import {
 } from "react-router-dom";
 import Home from "./Components/Home"
 
+// URL to send to home and form for GET request and POST request
 const URL = "http://localhost:3000/god-of-war-games"
 
+
+//display Home as our initial page
 const router = createBrowserRouter([
   {
     path:"/",
