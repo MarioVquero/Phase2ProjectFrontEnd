@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Games from "./Games";
-import Description from "./Description";
+// import Description from "./Description";
 import Nav from "../nav";
 
 export default function Home({ URL }) {
