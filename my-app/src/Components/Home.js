@@ -18,7 +18,6 @@ export default function Home({ URL }) {
   //and passing down games to both Games
   return (
     <div>
-      <Nav />
       <Games Games={games} />
     </div>
   );
