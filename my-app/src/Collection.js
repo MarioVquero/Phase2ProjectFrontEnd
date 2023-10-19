@@ -1,9 +1,13 @@
 import React, { useState } from "react";
-import Home from "./Components/Home";
 //import Description from "./Description"
+import { useLoaderData } from "react-router-dom";
 
 function Collection() {
-  return null;
+  const data = useLoaderData();
+
+
+
+  return console.log(data);
 }
 
 export default Collection;

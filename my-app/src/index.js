@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home URL={URL} />,
+        element: <Home URL={URL}/>,
       },
       {
         path: "form",
@@ -30,6 +30,7 @@ const router = createBrowserRouter([
       {
         path: "collection",
         element: <Collection URL={URL} />,
+        loader: async () => fetch(URL).then(r => r.json())
       },
     ]
   }
