@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import bootstrap from "bootstrap";
 
 function Form({ URL }) {
   const onSubmit = (newGame) => {
@@ -36,51 +37,59 @@ function Form({ URL }) {
   };
 
   return (
-    <form onSubmit={onSubmitNewGame}>
-      <input
-        type="text"
-        name="title"
-        value={setNewGame.name}
-        placeholder="title"
-        onChange={onChangeNewGame}
-      />
-      <input
-        type="text"
-        name="image"
-        value={setNewGame.image}
-        placeholder="insert url here"
-        onChange={onChangeNewGame}
-      />
-      <input
-        type="text"
-        name="yearOfRelease"
-        value={setNewGame.yearOfRelease}
-        placeholder="year of release"
-        onChange={onChangeNewGame}
-      />
-      <input
-        type="text"
-        name="rating"
-        value={setNewGame.rating}
-        placeholder="What is your rating"
-        onChange={onChangeNewGame}
-      />
-      <input
-        type="text"
-        name="console"
-        value={setNewGame.console}
-        placeholder="console played on"
-        onChange={onChangeNewGame}
-      />
-      <input
-        type="text"
-        name="review"
-        value={setNewGame.review}
-        placeholder="your review"
-        onChange={onChangeNewGame}
-      />
-      <input type="submit" value="add" />
-    </form>
+    <div>
+      <form onSubmit={onSubmitNewGame} class="form-group">
+        <input
+          class="form-control"
+          type="text"
+          name="title"
+          value={setNewGame.name}
+          placeholder="title"
+          onChange={onChangeNewGame}
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="image"
+          value={setNewGame.image}
+          placeholder="insert url here"
+          onChange={onChangeNewGame}
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="yearOfRelease"
+          value={setNewGame.yearOfRelease}
+          placeholder="year of release"
+          onChange={onChangeNewGame}
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="rating"
+          value={setNewGame.rating}
+          placeholder="What is your rating"
+          onChange={onChangeNewGame}
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="console"
+          value={setNewGame.console}
+          placeholder="console played on"
+          onChange={onChangeNewGame}
+        />
+        <input
+          class="form-control"
+          type="text"
+          name="review"
+          value={setNewGame.review}
+          placeholder="your review"
+          onChange={onChangeNewGame}
+        />
+        <input type="submit" value="add" />
+      </form>
+    </div>
   );
 }
 
