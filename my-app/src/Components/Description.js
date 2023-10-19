@@ -11,8 +11,8 @@ export default function Description({Games})
     
     function handleClick()
     {
-        setPlayed(!Games.played);
-
+        setPlayed(!played);
+        console.log(played)
         const updateGame = 
             {
                 "id": Games.id,
