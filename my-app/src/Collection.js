@@ -5,8 +5,6 @@ import { useLoaderData } from "react-router-dom";
 function Collection() {
   const data = useLoaderData();
 
-
-
   return console.log(data);
 }
 

@@ -32,13 +32,14 @@ function Form({ URL }) {
 
   const onSubmitNewGame = (event) => {
     event.preventDefault();
+    console.log(newGame);
     // we are preventing default on submission because we don't want the page to rerender
     onSubmit(newGame);
   };
 
   return (
     <div>
-      <form onSubmit={onSubmitNewGame} class="form-group">
+      <form onSubmit={onSubmitNewGame} className="form-group">
         <input
           class="form-control"
           type="text"
@@ -89,6 +90,12 @@ function Form({ URL }) {
         />
         <input type="submit" value="add" />
       </form>
+      <div>
+        <h1>{newGame.title}</h1>
+        <h2>{newGame.yearOfRelease}</h2>
+        <h3>{newGame.rating}</h3>
+        <p>{newGame.review}</p>
+      </div>
     </div>
   );
 }
