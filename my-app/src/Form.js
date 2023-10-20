@@ -44,7 +44,7 @@ function Form({ URL }) {
           class="form-control"
           type="text"
           name="title"
-          value={setNewGame.name}
+          value={setNewGame.title}
           placeholder="title"
           onChange={onChangeNewGame}
         />
@@ -92,8 +92,10 @@ function Form({ URL }) {
       </form>
       <div>
         <h1>{newGame.title}</h1>
+        <img src={newGame.image} alt="game" />
         <h2>{newGame.yearOfRelease}</h2>
         <h3>{newGame.rating}</h3>
+        <h3>{newGame.console}</h3>
         <p>{newGame.review}</p>
       </div>
     </div>

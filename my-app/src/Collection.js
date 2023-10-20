@@ -3,9 +3,20 @@ import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 function Collection() {
-  const data = useLoaderData();
+  const games = useLoaderData();
 
-  return console.log(data);
+  return (
+    <div>
+      {games.map((game) => (
+        <div>
+          <h1>{game.title}</h1>
+          <h2>{game.yearOfRelease}</h2>
+          <h3>{game.rating}</h3>
+          <p>{game.review}</p>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default Collection;
