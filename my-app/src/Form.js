@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import bootstrap from "bootstrap";
+// import bootstrap from "bootstrap";
 
 function Form({ URL }) {
   const onSubmit = (newGame) => {
