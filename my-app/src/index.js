@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
 import Home from "./Components/Home";
@@ -16,12 +16,12 @@ const URL = "http://localhost:3000/god-of-war-games";
 //display Home as our initial page
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Root/>,
+    path: "/",
+    element: <Root />,
     children: [
       {
         path: "/",
-        element: <Home URL={URL}/>,
+        element: <Home URL={URL} />,
       },
       {
         path: "form",
@@ -30,10 +30,10 @@ const router = createBrowserRouter([
       {
         path: "collection",
         element: <Collection URL={URL} />,
-        loader: async () => fetch(URL).then(r => r.json())
+        loader: async () => fetch(URL).then((r) => r.json()),
       },
-    ]
-  }
+    ],
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

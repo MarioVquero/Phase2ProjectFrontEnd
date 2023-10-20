@@ -3,7 +3,7 @@ import Games from "./Games";
 // import Description from "./Description";
 import Nav from "../nav";
 
-export default function Home({URL}) {
+export default function Home({ URL }) {
   //state for holding game info
   const [games, setGames] = useState([]);
 
